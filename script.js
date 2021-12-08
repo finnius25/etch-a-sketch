@@ -5,6 +5,13 @@ const eraserBtn = document.createElement('button');
 const sizeBtn = document.createElement('button');
 const btnContainer = document.querySelector(".buttons");
 
+window.onload = () => {
+    const boxes = document.querySelectorAll(".box");
+    boxes.forEach(box => box.addEventListener('mouseover', () => {
+        box.style.background = 'black'
+    }))
+}
+
 function gridSize (col, rows) {
     for (i = 0; i < (col * rows); i++) {
         const div = document.createElement('div');
@@ -82,4 +89,5 @@ function reSize() {
     btnContainer.appendChild(sizeBtn).classList.add('btn');
 }
 reSize();
+
 
