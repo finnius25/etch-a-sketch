@@ -4,25 +4,32 @@
     box-sizing: border-box;
 }
 
-body {
+section {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     width: 100%;
 }
 
+section h1 {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 4em;
+}
+
 .container {
-    display: flex;
-    background-color: #F4D03F;
+    display: grid;
     height: 960px;
-    width: 45%;
+    width: 960px;
+    z-index: 10;
 }
 
 .box {
     border: 1px solid black;
-    height: 100%;
-    width: 100%;
 }
 
 .color-change {
